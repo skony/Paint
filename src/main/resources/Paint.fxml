@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.put.tpal.ApplicationController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="651.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="%menu.file">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onOpen" text="%menuitem.open" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSave" text="%menuitem.save" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="%menuitem.saveas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%menu.edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onUndo" text="%menuitem.undo" />
+                  <MenuItem mnemonicParsing="false" onAction="#onRedo" text="%menuitem.redo" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="%menu.language">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onEnglish" text="%menuitem.english" />
+                  <MenuItem mnemonicParsing="false" onAction="#onPolish" text="%menuitem.polski" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Canvas fx:id="canvas" height="413.0" layoutX="150.0" layoutY="27.0" onMouseClicked="#onMouseClicked" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" width="501.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0" />
+      <FlowPane fx:id="flowPane" layoutY="27.0" onMouseClicked="#onFlowPaneMouseClicked" prefHeight="279.0" prefWidth="150.0" AnchorPane.bottomAnchor="132.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="27.0" />
+      <ColorPicker fx:id="colorPicker" layoutX="14.0" layoutY="399.0" onAction="#onColorPickerAction" prefHeight="25.0" prefWidth="130.0" />
+      <Slider fx:id="slider" layoutX="9.0" layoutY="379.0" min="1.0" value="1.0" />
+   </children>
+</AnchorPane>
